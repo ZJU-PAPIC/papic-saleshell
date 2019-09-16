@@ -1,0 +1,20 @@
+pipeline:
+  test:
+    image: node
+    commands:
+    - npm install
+    - npm test
+    - echo "test pass"
+  build:
+    image: node
+    commands:
+    - npm run build
+  godocker:
+    image: plugins/docker
+    repo: saleshell/prod
+    username: kysoowjk
+    password: #wangjk00
+    auto_tag: true
+  prod:
+    image: saleshell/prod:latest
+    datach: true
