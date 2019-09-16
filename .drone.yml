@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: node:stable
+    image: nginx:stable-alpine
     commands:
     - npm install
     - npm run build
