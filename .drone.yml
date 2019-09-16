@@ -1,13 +1,8 @@
 pipeline:
-  test:
-    image: node
+  build:
+    image: node:stable
     commands:
     - npm install
-    - npm test
-    - echo "test pass"
-  build:
-    image: node
-    commands:
     - npm run build
   godocker:
     image: plugins/docker
