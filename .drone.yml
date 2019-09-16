@@ -7,9 +7,6 @@ pipeline:
   godocker:
     image: plugins/docker
     repo: saleshell/prod
-    username: kysoowjk
-    password: #wangjk00
-    auto_tag: true
   prod:
-    image: saleshell/prod:latest
+    image: saleshell/prod
     datach: true
