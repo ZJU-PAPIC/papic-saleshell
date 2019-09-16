@@ -6,7 +6,12 @@ pipeline:
     - CI=false npm run build
   godocker:
     image: plugins/docker
-    repo: saleshell/prod
+    repo: kysoowjk/saleshell
+    username: 
+      from_secret: docker_username
+    password: 
+      from_secret: docker_password
+    auto_tag: true
   prod:
-    image: saleshell/prod
+    image: kysoowjk/saleshell:latest
     datach: true
