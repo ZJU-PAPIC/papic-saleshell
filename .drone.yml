@@ -3,7 +3,7 @@ pipeline:
     image: node
     commands:
     - npm install
-    - npm run build
+    - CI=false npm run build
   godocker:
     image: plugins/docker
     repo: saleshell/prod
